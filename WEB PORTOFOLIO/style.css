@@ -1,0 +1,451 @@
+:root {
+    --bg-main: #0f0a10;
+    --bg-gradient: linear-gradient(135deg, #1a101c 0%, #0f0a10 100%);
+    --card-bg: rgba(255, 182, 193, 0.05);
+    --card-border: rgba(255, 182, 193, 0.2);
+    --primary-pink: #ff758c;
+    --secondary-pink: #ff9a9e;
+    --text-light: #fce4ec;
+    --text-muted: #d1b3c4;
+    --glow-pink: rgba(255, 117, 140, 0.25);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg-main);
+    background-image: var(--bg-gradient);
+    color: var(--text-light);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Glassmorphism Effect */
+.glass {
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--card-border);
+    border-radius: 20px;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 8%;
+    background: rgba(15, 10, 16, 0.85);
+    backdrop-filter: blur(15px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--card-border);
+}
+
+.logo {
+    font-family: 'Fira Code', monospace;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary-pink);
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-pink);
+}
+
+/* Hero Section */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    padding-top: 5rem;
+    gap: 3rem;
+}
+
+.hero-content {
+    flex: 1.2;
+}
+
+.badge {
+    background: rgba(255, 117, 140, 0.12);
+    color: var(--primary-pink);
+    padding: 0.5rem 1.1rem;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid var(--card-border);
+    margin-bottom: 1.2rem;
+}
+
+.hero-content h1 {
+    font-size: 3.2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.highlight {
+    background: linear-gradient(135deg, var(--primary-pink), var(--secondary-pink));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+    line-height: 1.7;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 0.8rem 1.8rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.primary-btn {
+    background: linear-gradient(135deg, var(--primary-pink), var(--secondary-pink));
+    color: #0f0a10;
+    box-shadow: 0 8px 25px var(--glow-pink);
+}
+
+.primary-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(255, 117, 140, 0.4);
+}
+
+.secondary-btn {
+    background: transparent;
+    color: var(--text-light);
+    border: 1px solid var(--card-border);
+}
+
+.secondary-btn:hover {
+    border-color: var(--primary-pink);
+    color: var(--primary-pink);
+    background: rgba(255, 117, 140, 0.05);
+}
+
+/* Hero Image with Glow Ring */
+.hero-img-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.profile-img {
+    width: 290px;
+    height: 290px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--card-border);
+    box-shadow: 0 0 40px var(--glow-pink);
+    z-index: 2;
+    transition: transform 0.4s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.03);
+}
+
+/* Sections */
+.section {
+    padding: 6rem 10%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.section-title span {
+    font-family: 'Fira Code', monospace;
+    color: var(--primary-pink);
+    font-size: 1.4rem;
+}
+
+/* About Layout */
+.about-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+.about-card {
+    padding: 2.5rem;
+}
+
+.about-card p {
+    color: var(--text-muted);
+    margin-bottom: 1.2rem;
+    font-size: 1.05rem;
+}
+
+.stats-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.stat-box {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.stat-box h3 {
+    color: var(--primary-pink);
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+}
+
+.stat-box p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.8rem;
+}
+
+.skill-card {
+    padding: 2.2rem;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--primary-pink);
+}
+
+.skill-icon {
+    font-size: 2.2rem;
+    color: var(--primary-pink);
+    margin-bottom: 1.2rem;
+}
+
+.skill-card h3 {
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+}
+
+.skill-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.8rem;
+}
+
+.project-card {
+    padding: 2.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--primary-pink);
+}
+
+.project-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.2rem;
+}
+
+.folder-icon {
+    font-size: 2rem;
+    color: var(--primary-pink);
+}
+
+.proj-links {
+    font-size: 1.3rem;
+    color: var(--text-muted);
+}
+
+.project-card h3 {
+    margin-bottom: 0.8rem;
+    font-size: 1.25rem;
+}
+
+.project-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+.tags {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+}
+
+.tags span {
+    background: rgba(255, 117, 140, 0.1);
+    border: 1px solid var(--card-border);
+    color: var(--primary-pink);
+    padding: 0.3rem 0.8rem;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-family: 'Fira Code', monospace;
+}
+
+/* Training Grid */
+.training-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.8rem;
+}
+
+.training-card {
+    padding: 2.2rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.training-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-pink);
+}
+
+.training-card i {
+    font-size: 2.2rem;
+    color: var(--primary-pink);
+    flex-shrink: 0;
+}
+
+.training-card h4 {
+    font-size: 1.15rem;
+    margin-bottom: 0.2rem;
+}
+
+.sub-text {
+    font-family: 'Fira Code', monospace;
+    color: var(--primary-pink);
+    font-size: 0.85rem;
+    margin-bottom: 0.8rem;
+}
+
+.training-card p:not(.sub-text) {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 3rem;
+    background: rgba(10, 7, 11, 0.95);
+    border-top: 1px solid var(--card-border);
+    color: var(--text-light);
+    margin-top: 4rem;
+}
+
+.footer-sub {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+    font-family: 'Fira Code', monospace;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .hero-section {
+        flex-direction: column-reverse;
+        padding-top: 7rem;
+        text-align: center;
+    }
+    .hero-buttons {
+        justify-content: center;
+    }
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+    .nav-links {
+        display: none;
+    }
+}
+
+/* Styling Tombol Selengkapnya pada Project Card */
+.project-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    color: var(--primary-pink);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    font-family: 'Fira Code', monospace;
+    transition: all 0.3s ease;
+}
+
+.project-btn i {
+    transition: transform 0.3s ease;
+}
+
+.project-btn:hover {
+    color: var(--text-light);
+}
+
+.project-btn:hover i {
+    transform: translateX(4px); /* Efek panah bergeser sedikit ke kanan saat di-hover */
+}
