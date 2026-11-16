@@ -3,30 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Azmi Hani Nawra M — Cyber Security & Web Dev</title>
+    <title>Azmi Hani Nawra Ma'arif | Cyber Security & Web Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Background Effects -->
-    <div class="bg-grid"></div>
+    <!-- Interactive Particle Network Canvas -->
+    <canvas id="cyberCanvas"></canvas>
     <div class="cursor-glow" id="cursorGlow"></div>
-    <div class="ambient-orb orb-1"></div>
-    <div class="ambient-orb orb-2"></div>
 
-    <!-- Floating Pill Navbar -->
+    <!-- Floating Glass Navbar -->
     <header class="navbar-wrapper">
         <nav class="navbar">
-            <a href="#home" class="logo">hani<span>.sec</span></a>
+            <a href="#home" class="logo">&lt;hani<span>.sec</span>/&gt;</a>
             <ul class="nav-links">
-                <li><a href="#about">Profile</a></li>
-                <li><a href="#skills">Arsenal</a></li>
-                <li><a href="#projects">Works</a></li>
-                <li><a href="#training">Credentials</a></li>
+                <li><a href="#identity">01. Identity</a></li>
+                <li><a href="#skills">02. Arsenal</a></li>
+                <li><a href="#projects">03. Works</a></li>
+                <li><a href="#training">04. Credentials</a></li>
             </ul>
             <a href="https://drive.google.com/drive/folders/1-9Fv41W7j9FRp2T9lxF6PXTGIZgGn-QS?usp=drive_link" target="_blank" class="nav-cta">
-                Portfolio Drive <i class="fas fa-arrow-up-right-from-square"></i>
+                <i class="fab fa-google-drive"></i> Drive Archive
             </a>
         </nav>
     </header>
@@ -36,262 +34,305 @@
         <section id="home" class="hero">
             <div class="hero-left">
                 <div class="status-pill">
-                    <span class="pulse-dot"></span> Available for Collaboration • UAD Informatics
+                    <span class="pulse-dot"></span> SYSTEM ONLINE // INFORMATICS UAD '23
                 </div>
+                <p class="hero-kicker scramble-text" data-value="CYBER SECURITY & FULL-STACK DEVELOPER">
+                    CYBER SECURITY & FULL-STACK AI DEVELOPER
+                </p>
                 <h1>
-                    Securing Systems & <br>
-                    Crafting <span class="gradient-text">Clean Webs.</span>
+                    Hi, I'm <br>
+                    <span class="gradient-text scramble-text" data-value="Azmi Hani Nawra Ma'arif">
+                        Azmi Hani Nawra Ma'arif
+                    </span>
                 </h1>
                 <p class="hero-desc">
-                    Hi, I'm <strong>Azmi Hani Nawra Ma'arif</strong>. An Informatics undergraduate at Universitas Ahmad Dahlan focusing on <strong>Cyber Security</strong>, heuristic malware analysis, and full-stack backend engineering.
+                    An Informatics undergraduate at <strong>Universitas Ahmad Dahlan</strong> specializing in <strong>Cyber Security</strong>, heuristic malware detection, and full-stack web engineering. Passionate about securing digital infrastructures while crafting clean, resilient software.
                 </p>
 
-                <!-- Mini Interactive Terminal -->
+                <!-- Interactive Command Line Terminal -->
                 <div class="mini-terminal">
                     <div class="terminal-header">
-                        <div class="dots">
-                            <span></span><span></span><span></span>
-                        </div>
-                        <span class="term-title">hani@uad-sec:~</span>
+                        <div class="dots"><span></span><span></span><span></span></div>
+                        <span class="term-title">root@hani-sec:~/profile</span>
                     </div>
                     <div class="terminal-body" id="terminalOutput">
-                        <p><span class="prompt">$</span> whoami</p>
-                        <p class="output">Cyber Security Enthusiast | Asisten Praktikum | Fiction Writer 🌸</p>
-                        <p><span class="prompt">$</span> <span id="typingText"></span><span class="cursor">|</span></p>
+                        <p><span class="prompt">hani@uad:~$</span> cat identity.json</p>
+                        <p class="output">
+                            { "name": "Azmi Hani Nawra Ma'arif", "major": "Informatics (Cyber Security)", "roles": ["Asisten Praktikum", "Student Employee", "HMIF Alumni"] }
+                        </p>
+                        <p><span class="prompt">hani@uad:~$</span> <span class="typing-live" id="typingLive"></span><span class="cursor">█</span></p>
                     </div>
                     <div class="terminal-actions">
-                        <button onclick="runCommand('track')">./check-track</button>
-                        <button onclick="runCommand('org')">./leadership</button>
-                        <button onclick="runCommand('hobby')">./off-duty</button>
+                        <button onclick="runCommand('academic')">./academic-roles</button>
+                        <button onclick="runCommand('org')">./organization</button>
+                        <button onclick="runCommand('security')">./sec-stack</button>
+                        <button onclick="runCommand('creative')">./creative-side</button>
                     </div>
                 </div>
             </div>
 
             <div class="hero-right">
-                <div class="photo-frame">
-                    <div class="frame-deco-top">SEC-ID // 2300018277</div>
-                    <img src="foto.jpeg" alt="Azmi Hani Nawra Ma'arif" class="profile-img">
-                    <div class="floating-badge badge-top">
-                        <i class="fas fa-shield-virus"></i> YARA & Network
+                <div class="photo-frame tilt-card">
+                    <div class="scanner-line"></div>
+                    <div class="frame-header">
+                        <span>ID: 2300018277</span>
+                        <span class="verified"><i class="fas fa-circle-check"></i> VERIFIED</span>
                     </div>
-                    <div class="floating-badge badge-bottom">
-                        <i class="fab fa-laravel"></i> Full-Stack Dev
+                    <img src="foto.jpeg" alt="Azmi Hani Nawra Ma'arif" class="profile-img">
+                    <div class="frame-footer">
+                        <div>
+                            <small>PRIMARY TRACK</small>
+                            <strong>Cyber Security & Web Dev</strong>
+                        </div>
+                        <i class="fas fa-fingerprint fp-icon"></i>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Bento Grid: About & Experience -->
-        <section id="about" class="section reveal">
+        <!-- Section 01: Detailed Identity Dossier -->
+        <section id="identity" class="section reveal">
             <div class="section-header">
-                <span class="eyebrow">01 / IDENTITY & JOURNEY</span>
-                <h2>Beyond the Code</h2>
+                <span class="eyebrow">01 // PERSONAL DOSSIER & BACKGROUND</span>
+                <h2 class="scramble-text" data-value="Identity & Roles">Identity & Roles</h2>
             </div>
 
-            <div class="bento-grid">
-                <!-- Main Bio Card -->
-                <div class="bento-card bento-large">
-                    <div class="card-tag"><i class="fas fa-user-astronaut"></i> Biography</div>
-                    <h3>Bridging Security Engineering & Organizational Leadership</h3>
-                    <p>
-                        As an Informatics student at <strong>Universitas Ahmad Dahlan</strong>, I thrive at the intersection of defensive security and backend architecture—dissecting network packets, writing custom YARA detection rules, and building scalable web applications.
-                    </p>
-                    <p>
-                        Outside the lab, I served in the <strong>Informatics Student Association (HMIF) for two consecutive terms</strong>, contributed to department and faculty committees, and actively mentor peers as a <strong>Teaching Assistant (Asisten Praktikum)</strong> alongside working in faculty administration.
-                    </p>
+            <div class="dossier-grid">
+                <!-- Left: Comprehensive Identity Specs -->
+                <div class="dossier-profile-card tilt-card">
+                    <div class="dossier-top">
+                        <i class="fas fa-id-badge"></i>
+                        <span>SUBJECT SPECIFICATIONS</span>
+                    </div>
+                    <ul class="spec-list">
+                        <li>
+                            <span class="spec-label">Full Name</span>
+                            <span class="spec-val">Azmi Hani Nawra Ma'arif (Hani)</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">University</span>
+                            <span class="spec-val">Universitas Ahmad Dahlan (UAD)</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">Degree & Major</span>
+                            <span class="spec-val">Bachelor of Informatics (S1 Informatika)</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">Specialization</span>
+                            <span class="spec-val">Cyber Security & Full-Stack Web Engineering</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">Campus Roles</span>
+                            <span class="spec-val">Asisten Praktikum & Faculty Student Employee</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">Organization</span>
+                            <span class="spec-val">HMIF (Informatics Student Association) — 2 Terms</span>
+                        </li>
+                    </ul>
                 </div>
 
-                <!-- Highlight Stat 1 -->
-                <div class="bento-card bento-accent">
-                    <div class="big-number">2x</div>
-                    <h4>HMIF Terms</h4>
-                    <p>Active committee leadership & student governance at department and faculty levels.</p>
-                </div>
-
-                <!-- Highlight Stat 2 -->
-                <div class="bento-card">
-                    <div class="card-icon-box"><i class="fas fa-chalkboard-user"></i></div>
-                    <h4>Asisten Praktikum</h4>
-                    <p>Guiding lab sessions in Cryptography, Computer Security, Computer Graphics, and Decision Support Systems.</p>
-                </div>
-
-                <!-- Creative Side Card -->
-                <div class="bento-card bento-wide">
-                    <div class="creative-flex">
-                        <div class="card-icon-box pink-box"><i class="fas fa-feather-pointed"></i></div>
+                <!-- Right: Narrative Story & Multi-Role Breakdown -->
+                <div class="dossier-story-stack">
+                    <div class="story-card tilt-card">
+                        <div class="story-icon"><i class="fas fa-shield-halved"></i></div>
                         <div>
-                            <h4>The Creative Side: Fiction & Literature</h4>
-                            <p>When I'm not hunting anomalies or debugging Laravel routes, I immerse myself in <strong>reading novels and writing original fiction stories</strong>—sharpening my storytelling and out-of-the-box problem solving.</p>
+                            <h3>Academic & Technical Identity</h3>
+                            <p>
+                                I am an undergraduate Informatics student at <strong>Universitas Ahmad Dahlan</strong> with a dedicated specialization in <strong>Cyber Security</strong>. My technical journey revolves around network packet inspection, Linux environment hardening, cryptography, and building secure web applications using PHP/Laravel and modern JavaScript.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="story-card tilt-card">
+                        <div class="story-icon"><i class="fas fa-chalkboard-user"></i></div>
+                        <div>
+                            <h3>Asisten Praktikum & Faculty Staff</h3>
+                            <p>
+                                Trusted as a <strong>Laboratory Teaching Assistant (Asisten Praktikum)</strong> mentoring students in <em>Computer Security (Keamanan Komputer), Cryptography, Computer Graphics, and Intelligent Business & Decision Making</em>. Alongside teaching, I serve as a <strong>Student Employee</strong> in the Faculty of Industrial Technology (FTI) administration office.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="story-card tilt-card">
+                        <div class="story-icon"><i class="fas fa-users-gear"></i></div>
+                        <div>
+                            <h3>Leadership & Creative Pursuits</h3>
+                            <p>
+                                Beyond technical labs, I served as an active board member of the <strong>Informatics Student Association (HMIF) for two consecutive terms</strong> and contributed to numerous department and faculty committees. Off-screen, I am an avid <strong>novel reader and fiction writer</strong>—blending analytical precision with creative storytelling.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Skills Arsenal -->
+        <!-- Section 02: Technical Arsenal -->
         <section id="skills" class="section reveal">
             <div class="section-header">
-                <span class="eyebrow">02 / TECHNICAL ARSENAL</span>
-                <h2>Tools & Capabilities</h2>
+                <span class="eyebrow">02 // TECHNICAL ARSENAL</span>
+                <h2 class="scramble-text" data-value="Tools & Capabilities">Tools & Capabilities</h2>
             </div>
 
-            <div class="arsenal-wrapper">
-                <div class="arsenal-category">
-                    <h3><i class="fas fa-lock"></i> Cyber Security & Analysis</h3>
-                    <div class="pill-cloud">
+            <div class="arsenal-grid">
+                <div class="arsenal-card tilt-card">
+                    <div class="arsenal-head">
+                        <i class="fas fa-user-secret"></i>
+                        <h3>Cyber Security</h3>
+                    </div>
+                    <p class="arsenal-sub">Threat detection, packet inspection & cryptographic analysis.</p>
+                    <div class="skill-tags">
                         <span>Wireshark</span>
-                        <span>Linux Environment</span>
+                        <span>Linux OS</span>
                         <span>YARA Rules</span>
-                        <span>Heuristic Malware Analysis</span>
-                        <span>Network Traffic Inspection</span>
+                        <span>Malware Heuristics</span>
                         <span>Applied Cryptography</span>
-                        <span>Proxy Tools</span>
+                        <span>Proxy & Traffic Analysis</span>
                     </div>
                 </div>
 
-                <div class="arsenal-category">
-                    <h3><i class="fas fa-code"></i> Full-Stack & Database</h3>
-                    <div class="pill-cloud">
+                <div class="arsenal-card tilt-card">
+                    <div class="arsenal-head">
+                        <i class="fas fa-code"></i>
+                        <h3>Web & Backend</h3>
+                    </div>
+                    <p class="arsenal-sub">Scalable server-side logic & responsive interfaces.</p>
+                    <div class="skill-tags">
                         <span>PHP</span>
                         <span>Laravel</span>
                         <span>JavaScript (ES6+)</span>
                         <span>Node.js</span>
-                        <span>HTML5 & Modern CSS</span>
-                        <span>MySQL Normalization</span>
-                        <span>RESTful Routing</span>
+                        <span>HTML5 & CSS3</span>
+                        <span>MySQL (3NF)</span>
                     </div>
                 </div>
 
-                <div class="arsenal-category">
-                    <h3><i class="fas fa-terminal"></i> Development & Productivity</h3>
-                    <div class="pill-cloud">
+                <div class="arsenal-card tilt-card">
+                    <div class="arsenal-head">
+                        <i class="fas fa-toolbox"></i>
+                        <h3>Dev & Productivity</h3>
+                    </div>
+                    <p class="arsenal-sub">Version control, mobile prototyping & office workflows.</p>
+                    <div class="skill-tags">
                         <span>Git & GitHub</span>
                         <span>VS Code</span>
                         <span>Laravel Herd</span>
                         <span>XAMPP</span>
                         <span>Android Studio (Kotlin)</span>
-                        <span>Microsoft Office Suite</span>
+                        <span>Microsoft Apps</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Featured Projects (Editorial Layout) -->
+        <!-- Section 03: Projects & Portfolio Drive -->
         <section id="projects" class="section reveal">
             <div class="section-header">
-                <span class="eyebrow">03 / SELECTED WORKS</span>
-                <h2>Featured Projects</h2>
+                <span class="eyebrow">03 // DEPLOYED WORKS</span>
+                <h2 class="scramble-text" data-value="Featured Projects">Featured Projects</h2>
             </div>
 
-            <!-- Spotlight Project -->
-            <div class="spotlight-project">
-                <div class="spotlight-content">
-                    <span class="spotlight-badge">FEATURED RESEARCH & PROTOTYPE</span>
+            <!-- Spotlight Card -->
+            <div class="spotlight-box tilt-card">
+                <div class="spotlight-info">
+                    <span class="tag-highlight"><i class="fas fa-bolt"></i> SECURITY RESEARCH PROTOTYPE</span>
                     <h3>YARA Media Anomaly Detector</h3>
                     <p>
-                        A security-focused web prototype built with Laravel designed to inspect uploaded media files and detect heuristic malware anomalies using custom-engineered YARA rules.
+                        A Laravel-based security prototype engineered to inspect media file uploads in real time and detect heuristic malware anomalies using custom-written YARA rule signatures.
                     </p>
-                    <div class="tech-row">
-                        <span>Laravel</span>
-                        <span>YARA Engine</span>
-                        <span>Heuristic Analysis</span>
-                        <span>File Security</span>
+                    <div class="tech-pills">
+                        <span>Laravel</span><span>YARA Engine</span><span>Heuristic Security</span><span>PHP</span>
                     </div>
-                    <div class="project-actions">
-                        <a href="https://github.com/2300018277" target="_blank" class="btn-solid">
-                            <i class="fab fa-github"></i> View Source Code
-                        </a>
-                    </div>
+                    <a href="https://github.com/2300018277" target="_blank" class="btn-neon">
+                        <i class="fab fa-github"></i> Inspect Repository
+                    </a>
                 </div>
-                <div class="spotlight-visual">
-                    <div class="code-preview">
-                        <span class="c-pink">rule</span> Detect_Media_Anomaly {<br>
-                        &nbsp;&nbsp;<span class="c-muted">meta:</span><br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;author = <span class="c-light">"Azmi Hani"</span><br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;category = <span class="c-light">"Heuristic"</span><br>
-                        &nbsp;&nbsp;<span class="c-muted">condition:</span><br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;$payload_sig <span class="c-pink">at</span> entrypoint<br>
-                        }
-                    </div>
+                <div class="spotlight-code">
+                    <div class="code-bar"><span>anomaly_detector.yar</span><span>UTF-8</span></div>
+                    <pre><code><span class="c-pink">rule</span> Media_Upload_Heuristic {
+  <span class="c-dim">meta:</span>
+    author = <span class="c-str">"Azmi Hani Nawra M"</span>
+    target = <span class="c-str">"Web Upload Gateway"</span>
+  <span class="c-dim">strings:</span>
+    $exec_header = { 4D 5A 90 00 }
+  <span class="c-dim">condition:</span>
+    $exec_header <span class="c-pink">in</span> (0..1024)
+}</code></pre>
                 </div>
             </div>
 
-            <!-- Other Projects Grid -->
-            <div class="sub-projects-grid">
-                <div class="work-card">
-                    <div class="work-top">
-                        <span class="work-num">02</span>
-                        <a href="https://github.com/2300018277" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <!-- Sub Projects Grid -->
+            <div class="projects-grid">
+                <div class="proj-card tilt-card">
+                    <div class="proj-top">
+                        <span class="proj-index">PRJ // 02</span>
+                        <i class="fab fa-github"></i>
                     </div>
                     <h4>Kartika Logistik Management</h4>
-                    <p>Backend system featuring multi-subdomain routing for regional branches, automated shipping tariff calculations, and sequential tracking numbers.</p>
-                    <div class="tech-row">
-                        <span>Laravel</span><span>MySQL</span><span>Multi-Subdomain</span>
+                    <p>Multi-subdomain backend architecture featuring automated shipping tariff logic, branch portals, and sequential tracking resi generation.</p>
+                    <div class="tech-pills">
+                        <span>Laravel</span><span>MySQL</span><span>Subdomain Routing</span>
                     </div>
-                    <a href="https://github.com/2300018277" target="_blank" class="work-link">
-                        Explore Repository <i class="fas fa-arrow-right"></i>
+                    <a href="https://github.com/2300018277" target="_blank" class="proj-link">
+                        Selengkapnya <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
 
-                <div class="work-card">
-                    <div class="work-top">
-                        <span class="work-num">03</span>
-                        <a href="https://github.com/2300018277" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <div class="proj-card tilt-card">
+                    <div class="proj-top">
+                        <span class="proj-index">PRJ // 03</span>
+                        <i class="fab fa-github"></i>
                     </div>
                     <h4>Interactive Web Applications</h4>
-                    <p>Collection of responsive front-end interfaces, custom UI themes, browser mini-games, and interactive web utilities built from scratch.</p>
-                    <div class="tech-row">
-                        <span>JavaScript</span><span>CSS3</span><span>UI/UX</span>
+                    <p>Suite of interactive front-end applications featuring custom UI aesthetics, browser mini-games, and responsive client-side logic.</p>
+                    <div class="tech-pills">
+                        <span>JavaScript</span><span>HTML5/CSS3</span><span>UI Engineering</span>
                     </div>
-                    <a href="https://github.com/2300018277" target="_blank" class="work-link">
-                        Explore Repository <i class="fas fa-arrow-right"></i>
+                    <a href="https://github.com/2300018277" target="_blank" class="proj-link">
+                        Selengkapnya <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
 
-                <div class="work-card drive-card">
-                    <div class="work-top">
-                        <span class="work-num">04</span>
-                        <a href="https://drive.google.com/drive/folders/1-9Fv41W7j9FRp2T9lxF6PXTGIZgGn-QS?usp=drive_link" target="_blank" aria-label="Google Drive"><i class="fab fa-google-drive"></i></a>
+                <div class="proj-card drive-highlight tilt-card">
+                    <div class="proj-top">
+                        <span class="proj-index">ARCHIVE // 04</span>
+                        <i class="fab fa-google-drive"></i>
                     </div>
-                    <h4>My Portfolio Archive on Google Drive</h4>
-                    <p>Complete repository of academic coursework, project documentation, design assets, and official certificates stored in Google Drive.</p>
-                    <div class="tech-row">
-                        <span>Documentation</span><span>Certificates</span><span>Full Archive</span>
+                    <h4>My Portfolio Google Drive</h4>
+                    <p>Centralized cloud repository containing full project documentation, academic deliverables, UI mockups, and official certificates.</p>
+                    <div class="tech-pills">
+                        <span>Google Drive</span><span>Certificates</span><span>Full Archive</span>
                     </div>
-                    <a href="https://drive.google.com/drive/folders/1-9Fv41W7j9FRp2T9lxF6PXTGIZgGn-QS?usp=drive_link" target="_blank" class="work-link">
+                    <a href="https://drive.google.com/drive/folders/1-9Fv41W7j9FRp2T9lxF6PXTGIZgGn-QS?usp=drive_link" target="_blank" class="proj-link">
                         Open Google Drive <i class="fas fa-arrow-up-right-from-square"></i>
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- Credentials / Training -->
+        <!-- Section 04: Training & Credentials -->
         <section id="training" class="section reveal">
             <div class="section-header">
-                <span class="eyebrow">04 / CERTIFICATIONS & TRAINING</span>
-                <h2>Continuous Learning</h2>
+                <span class="eyebrow">04 // CREDENTIALS & TRAINING</span>
+                <h2 class="scramble-text" data-value="Training & Programs">Training & Programs</h2>
             </div>
 
-            <div class="timeline-list">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-head">
-                            <h4>ASAH Dicoding Program — AI Full-Stack Developer Path</h4>
-                            <span class="year-tag">2026</span>
-                        </div>
-                        <p>Intensive career-readiness training covering artificial intelligence integration, modern full-stack web engineering, and scalable application architecture.</p>
+            <div class="cred-grid">
+                <div class="cred-card tilt-card">
+                    <div class="cred-badge"><i class="fas fa-certificate"></i></div>
+                    <div>
+                        <span class="cred-year">2026 • INTENSIVE PATH</span>
+                        <h4>ASAH Dicoding Program — AI Full-Stack Developer</h4>
+                        <p>Comprehensive engineering program focusing on AI model integration, modern full-stack web architecture, and production-ready software workflows.</p>
                     </div>
                 </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-head">
-                            <h4>Google Skill AI Labs</h4>
-                            <span class="year-tag">2026</span>
-                        </div>
-                        <p>Practical hands-on training in operating Google Cloud Skill Labs, experimenting with generative AI workflows, and managing cloud-based automation environments.</p>
+                <div class="cred-card tilt-card">
+                    <div class="cred-badge"><i class="fas fa-robot"></i></div>
+                    <div>
+                        <span class="cred-year">2026 • CLOUD & AI LABS</span>
+                        <h4>Google Skill AI Labs</h4>
+                        <p>Hands-on operational training in navigating Google Cloud Skill Labs, deploying generative AI tools, and managing cloud-based automation environments.</p>
                     </div>
                 </div>
             </div>
@@ -300,14 +341,14 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-inner">
+        <div class="footer-content">
             <div>
-                <div class="logo">hani<span>.sec</span></div>
-                <p>Azmi Hani Nawra Ma'arif • Informatics Universitas Ahmad Dahlan</p>
+                <div class="logo">&lt;hani<span>.sec</span>/&gt;</div>
+                <p>Azmi Hani Nawra Ma'arif • Informatics Universitas Ahmad Dahlan • 2026</p>
             </div>
-            <div class="footer-socials">
+            <div class="footer-links">
                 <a href="https://github.com/2300018277" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                <a href="https://drive.google.com/drive/folders/1-9Fv41W7j9FRp2T9lxF6PXTGIZgGn-QS?usp=drive_link" target="_blank"><i class="fab fa-google-drive"></i> Drive Portfolio</a>
+                <a href="https://drive.google.com/drive/folders/1-9Fv41W7j9FRp2T9lxF6PXTGIZgGn-QS?usp=drive_link" target="_blank"><i class="fab fa-google-drive"></i> Google Drive</a>
             </div>
         </div>
     </footer>
