@@ -3,194 +3,313 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Azmi Hani Nawra M | Informatics Portfolio</title>
+    <title>Azmi Hani Nawra M — Cyber Security & Web Dev</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Background Effects -->
+    <div class="bg-grid"></div>
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="ambient-orb orb-1"></div>
+    <div class="ambient-orb orb-2"></div>
 
-    <!-- Floating Navbar -->
-    <header class="navbar">
-        <div class="logo">&lt;Hani.dev /&gt;</div>
-        <nav>
+    <!-- Floating Pill Navbar -->
+    <header class="navbar-wrapper">
+        <nav class="navbar">
+            <a href="#home" class="logo">hani<span>.sec</span></a>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#training">Training</a></li>
+                <li><a href="#about">Profile</a></li>
+                <li><a href="#skills">Arsenal</a></li>
+                <li><a href="#projects">Works</a></li>
+                <li><a href="#training">Credentials</a></li>
             </ul>
+            <a href="URL_GOOGLE_DRIVE_KAMU_DISINI" target="_blank" class="nav-cta">
+                Portfolio Drive <i class="fas fa-arrow-up-right-from-square"></i>
+            </a>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-section">
-        <div class="hero-content">
-            <span class="badge"><i class="fas fa-shield-alt"></i> Informatics & Cyber Security</span>
-            <h1>Hi, I'm <span class="highlight">Azmi Hani Nawra Ma'arif</span> 🌸</h1>
-            <p class="subtitle">Undergraduate Informatics student at Ahmad Dahlan University specializing in Cyber Security, Full-Stack Web Development, and Malware Analysis.</p>
-            <div class="hero-buttons">
-                <a href="#projects" class="btn primary-btn"><i class="fas fa-code"></i> Explore Projects</a>
-                <a href="#about" class="btn secondary-btn"><i class="fas fa-user"></i> About Me</a>
-            </div>
-        </div>
-        <div class="hero-img-container">
-            <div class="glow-ring"></div>
-            <img src="foto.jpeg" alt="Azmi Hani" class="profile-img">
-        </div>
-    </section>
+    <main class="container">
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-left">
+                <div class="status-pill">
+                    <span class="pulse-dot"></span> Available for Collaboration • UAD Informatics
+                </div>
+                <h1>
+                    Securing Systems & <br>
+                    Crafting <span class="gradient-text">Clean Webs.</span>
+                </h1>
+                <p class="hero-desc">
+                    Hi, I'm <strong>Azmi Hani Nawra Ma'arif</strong>. An Informatics undergraduate at Universitas Ahmad Dahlan focusing on <strong>Cyber Security</strong>, heuristic malware analysis, and full-stack backend engineering.
+                </p>
 
-   <!-- About Section -->
-    <section id="about" class="section">
-        <h2 class="section-title"><span>01.</span> About Me</h2>
-        <div class="about-grid">
-            <div class="about-card glass">
-                <p>Hello! I am an Informatics undergraduate student at Universitas Ahmad Dahlan focusing heavily on <strong>Cyber Security</strong> and backend architectures. I love dissecting network traffic, building secure web apps, and exploring heuristic threat detection.</p>
-                
-                <p>Beyond academics, I am actively involved in non-academic activities. I have served as an active committee member of the <strong>Informatics Student Association (HMIF) for two consecutive terms</strong> and participated in various student committees at both the department and faculty levels. I also work as a Teaching Assistant (Asisten Praktikum) for computer science courses and a student employee in faculty administration.</p>
-
-                <p>In my spare time, I enjoy <strong>reading novels and writing fiction stories</strong>, which helps fuel my creative thinking and problem-solving skills.</p>
-            </div>
-            <div class="stats-container">
-                <div class="stat-box glass">
-                    <h3>Focus</h3>
-                    <p>Cyber Security & Web Dev</p>
-                </div>
-                <div class="stat-box glass">
-                    <h3>Role & Org</h3>
-                    <p>HMIF 2 Periods & Asisten Praktikum</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="section">
-        <h2 class="section-title"><span>02.</span> Technical Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-card glass">
-                <div class="skill-icon"><i class="fas fa-shield-halved"></i></div>
-                <h3>Cyber Security</h3>
-                <p>Wireshark, Linux Environments, YARA Rules, Network Traffic Analysis, Cryptography</p>
-            </div>
-            <div class="skill-card glass">
-                <div class="skill-icon"><i class="fas fa-laptop-code"></i></div>
-                <h3>Web & Backend</h3>
-                <p>PHP, Laravel, JavaScript, HTML/CSS, Node.js, MySQL Database Normalization</p>
-            </div>
-            <div class="skill-card glass">
-                <div class="skill-icon"><i class="fas fa-toolbox"></i></div>
-                <h3>Tools & Workflow</h3>
-                <p>Git, GitHub, VS Code, Laravel Herd, XAMPP, Android Studio, Kotlin, Microsoft Apps</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-        <h2 class="section-title"><span>03.</span> Featured Projects</h2>
-        <div class="projects-grid">
-            
-            <!-- Proyek 1 -->
-            <div class="project-card glass">
-                <div class="project-top">
-                    <i class="far fa-folder-open folder-icon"></i>
-                    <div class="proj-links"><i class="fab fa-github"></i></div>
-                </div>
-                <h3>YARA Media Anomaly Detector</h3>
-                <p>Web prototype built with Laravel to test media upload security and detect heuristic malware anomalies using custom YARA rules.</p>
-                <div class="tags">
-                    <span>Laravel</span><span>YARA</span><span>Security</span>
-                </div>
-                <a href="https://github.com/username-kamu/repo-yara" target="_blank" class="project-btn">
-                    <span>Selengkapnya</span> <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-
-            <!-- Proyek 2 -->
-            <div class="project-card glass">
-                <div class="project-top">
-                    <i class="far fa-folder-open folder-icon"></i>
-                    <div class="proj-links"><i class="fab fa-github"></i></div>
-                </div>
-                <h3>Kartika Logistik Management</h3>
-                <p>Backend architecture featuring multi-subdomain routing, automated shipping price calculation, and sequential tracking resi numbers.</p>
-                <div class="tags">
-                    <span>Laravel</span><span>MySQL</span><span>Subdomain</span>
-                </div>
-                <a href="https://github.com/username-kamu/repo-kartika" target="_blank" class="project-btn">
-                    <span>Selengkapnya</span> <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-
-            <!-- Proyek 3 -->
-            <div class="project-card glass">
-                <div class="project-top">
-                    <i class="far fa-folder-open folder-icon"></i>
-                    <div class="proj-links"><i class="fab fa-github"></i></div>
-                </div>
-                <h3>Interactive Web Applications</h3>
-                <p>A collection of front-end web projects featuring custom UI themes, interactive mini-games, memory card games, and responsive layouts.</p>
-                <div class="tags">
-                    <span>JavaScript</span><span>HTML/CSS</span><span>UI/UX</span>
-                </div>
-                <a href="https://github.com/2300018277" target="_blank" class="project-btn">
-                    <span>Selengkapnya</span> <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-
-            <!-- Proyek 4: My Portfolio Google Drive (BARU) -->
-            <div class="project-card glass">
-                <div class="project-top">
-                    <i class="fas fa-folder-tree folder-icon"></i>
-                    <div class="proj-links"><i class="fab fa-google-drive" style="color: #ff758c;"></i></div>
-                </div>
-                <h3>My Portfolio Google Drive</h3>
-                <p>Complete compilation of academic projects, certificates, documentation, and coursework assets stored securely in Google Drive.</p>
-                <div class="tags">
-                    <span>Drive</span><span>Documents</span><span>Assets</span>
-                </div>
-                <a href="https://drive.google.com/drive/folders/1-9Fv41W7j9FRp2T9lxF6PXTGIZgGn-QS?usp=drive_link" target="_blank" class="project-btn">
-                    <span>Buka Google Drive</span> <i class="fas fa-external-link-alt"></i>
-                </a>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Training & Seminars Section -->
-    <section id="training" class="section">
-        <h2 class="section-title"><span>04.</span> Training & Seminars</h2>
-        <div class="training-grid">
-            
-            <!-- Pelatihan 1: ASAH Dicoding -->
-            <div class="training-card glass">
-                <i class="fas fa-certificate"></i>
-                <div>
-                    <h4>ASAH Dicoding Program</h4>
-                    <p class="sub-text">AI Full-Stack Developer Learning Path</p>
-                    <p>Intensive training program covering artificial intelligence integration, full-stack web engineering, and modern scalable application development.</p>
+                <!-- Mini Interactive Terminal -->
+                <div class="mini-terminal">
+                    <div class="terminal-header">
+                        <div class="dots">
+                            <span></span><span></span><span></span>
+                        </div>
+                        <span class="term-title">hani@uad-sec:~</span>
+                    </div>
+                    <div class="terminal-body" id="terminalOutput">
+                        <p><span class="prompt">$</span> whoami</p>
+                        <p class="output">Cyber Security Enthusiast | Asisten Praktikum | Fiction Writer 🌸</p>
+                        <p><span class="prompt">$</span> <span id="typingText"></span><span class="cursor">|</span></p>
+                    </div>
+                    <div class="terminal-actions">
+                        <button onclick="runCommand('track')">./check-track</button>
+                        <button onclick="runCommand('org')">./leadership</button>
+                        <button onclick="runCommand('hobby')">./off-duty</button>
+                    </div>
                 </div>
             </div>
 
-            <!-- Pelatihan 2: Google Skill AI -->
-            <div class="training-card glass">
-                <i class="fas fa-robot"></i>
-                <div>
-                    <h4>Google Skill AI Labs</h4>
-                    <p class="sub-text">Cloud & Artificial Intelligence Operational Training</p>
-                    <p>Hands-on training focused on operating Google cloud skill labs, exploring generative AI tools, and mastering modern cloud-based automation environments.</p>
+            <div class="hero-right">
+                <div class="photo-frame">
+                    <div class="frame-deco-top">SEC-ID // 2300018277</div>
+                    <img src="foto.jpeg" alt="Azmi Hani Nawra Ma'arif" class="profile-img">
+                    <div class="floating-badge badge-top">
+                        <i class="fas fa-shield-virus"></i> YARA & Network
+                    </div>
+                    <div class="floating-badge badge-bottom">
+                        <i class="fab fa-laravel"></i> Full-Stack Dev
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bento Grid: About & Experience -->
+        <section id="about" class="section reveal">
+            <div class="section-header">
+                <span class="eyebrow">01 / IDENTITY & JOURNEY</span>
+                <h2>Beyond the Code</h2>
+            </div>
+
+            <div class="bento-grid">
+                <!-- Main Bio Card -->
+                <div class="bento-card bento-large">
+                    <div class="card-tag"><i class="fas fa-user-astronaut"></i> Biography</div>
+                    <h3>Bridging Security Engineering & Organizational Leadership</h3>
+                    <p>
+                        As an Informatics student at <strong>Universitas Ahmad Dahlan</strong>, I thrive at the intersection of defensive security and backend architecture—dissecting network packets, writing custom YARA detection rules, and building scalable web applications.
+                    </p>
+                    <p>
+                        Outside the lab, I served in the <strong>Informatics Student Association (HMIF) for two consecutive terms</strong>, contributed to department and faculty committees, and actively mentor peers as a <strong>Teaching Assistant (Asisten Praktikum)</strong> alongside working in faculty administration.
+                    </p>
+                </div>
+
+                <!-- Highlight Stat 1 -->
+                <div class="bento-card bento-accent">
+                    <div class="big-number">2x</div>
+                    <h4>HMIF Terms</h4>
+                    <p>Active committee leadership & student governance at department and faculty levels.</p>
+                </div>
+
+                <!-- Highlight Stat 2 -->
+                <div class="bento-card">
+                    <div class="card-icon-box"><i class="fas fa-chalkboard-user"></i></div>
+                    <h4>Asisten Praktikum</h4>
+                    <p>Guiding lab sessions in Cryptography, Computer Security, Computer Graphics, and Decision Support Systems.</p>
+                </div>
+
+                <!-- Creative Side Card -->
+                <div class="bento-card bento-wide">
+                    <div class="creative-flex">
+                        <div class="card-icon-box pink-box"><i class="fas fa-feather-pointed"></i></div>
+                        <div>
+                            <h4>The Creative Side: Fiction & Literature</h4>
+                            <p>When I'm not hunting anomalies or debugging Laravel routes, I immerse myself in <strong>reading novels and writing original fiction stories</strong>—sharpening my storytelling and out-of-the-box problem solving.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Arsenal -->
+        <section id="skills" class="section reveal">
+            <div class="section-header">
+                <span class="eyebrow">02 / TECHNICAL ARSENAL</span>
+                <h2>Tools & Capabilities</h2>
+            </div>
+
+            <div class="arsenal-wrapper">
+                <div class="arsenal-category">
+                    <h3><i class="fas fa-lock"></i> Cyber Security & Analysis</h3>
+                    <div class="pill-cloud">
+                        <span>Wireshark</span>
+                        <span>Linux Environment</span>
+                        <span>YARA Rules</span>
+                        <span>Heuristic Malware Analysis</span>
+                        <span>Network Traffic Inspection</span>
+                        <span>Applied Cryptography</span>
+                        <span>Proxy Tools</span>
+                    </div>
+                </div>
+
+                <div class="arsenal-category">
+                    <h3><i class="fas fa-code"></i> Full-Stack & Database</h3>
+                    <div class="pill-cloud">
+                        <span>PHP</span>
+                        <span>Laravel</span>
+                        <span>JavaScript (ES6+)</span>
+                        <span>Node.js</span>
+                        <span>HTML5 & Modern CSS</span>
+                        <span>MySQL Normalization</span>
+                        <span>RESTful Routing</span>
+                    </div>
+                </div>
+
+                <div class="arsenal-category">
+                    <h3><i class="fas fa-terminal"></i> Development & Productivity</h3>
+                    <div class="pill-cloud">
+                        <span>Git & GitHub</span>
+                        <span>VS Code</span>
+                        <span>Laravel Herd</span>
+                        <span>XAMPP</span>
+                        <span>Android Studio (Kotlin)</span>
+                        <span>Microsoft Office Suite</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects (Editorial Layout) -->
+        <section id="projects" class="section reveal">
+            <div class="section-header">
+                <span class="eyebrow">03 / SELECTED WORKS</span>
+                <h2>Featured Projects</h2>
+            </div>
+
+            <!-- Spotlight Project -->
+            <div class="spotlight-project">
+                <div class="spotlight-content">
+                    <span class="spotlight-badge">FEATURED RESEARCH & PROTOTYPE</span>
+                    <h3>YARA Media Anomaly Detector</h3>
+                    <p>
+                        A security-focused web prototype built with Laravel designed to inspect uploaded media files and detect heuristic malware anomalies using custom-engineered YARA rules.
+                    </p>
+                    <div class="tech-row">
+                        <span>Laravel</span>
+                        <span>YARA Engine</span>
+                        <span>Heuristic Analysis</span>
+                        <span>File Security</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://github.com/2300018277" target="_blank" class="btn-solid">
+                            <i class="fab fa-github"></i> View Source Code
+                        </a>
+                    </div>
+                </div>
+                <div class="spotlight-visual">
+                    <div class="code-preview">
+                        <span class="c-pink">rule</span> Detect_Media_Anomaly {<br>
+                        &nbsp;&nbsp;<span class="c-muted">meta:</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;author = <span class="c-light">"Azmi Hani"</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;category = <span class="c-light">"Heuristic"</span><br>
+                        &nbsp;&nbsp;<span class="c-muted">condition:</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;$payload_sig <span class="c-pink">at</span> entrypoint<br>
+                        }
+                    </div>
                 </div>
             </div>
 
-        </div>
-    </section>
+            <!-- Other Projects Grid -->
+            <div class="sub-projects-grid">
+                <div class="work-card">
+                    <div class="work-top">
+                        <span class="work-num">02</span>
+                        <a href="https://github.com/2300018277" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                    <h4>Kartika Logistik Management</h4>
+                    <p>Backend system featuring multi-subdomain routing for regional branches, automated shipping tariff calculations, and sequential tracking numbers.</p>
+                    <div class="tech-row">
+                        <span>Laravel</span><span>MySQL</span><span>Multi-Subdomain</span>
+                    </div>
+                    <a href="https://github.com/2300018277" target="_blank" class="work-link">
+                        Explore Repository <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="work-card">
+                    <div class="work-top">
+                        <span class="work-num">03</span>
+                        <a href="https://github.com/2300018277" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                    <h4>Interactive Web Applications</h4>
+                    <p>Collection of responsive front-end interfaces, custom UI themes, browser mini-games, and interactive web utilities built from scratch.</p>
+                    <div class="tech-row">
+                        <span>JavaScript</span><span>CSS3</span><span>UI/UX</span>
+                    </div>
+                    <a href="https://github.com/2300018277" target="_blank" class="work-link">
+                        Explore Repository <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="work-card drive-card">
+                    <div class="work-top">
+                        <span class="work-num">04</span>
+                        <a href="URL_GOOGLE_DRIVE_KAMU_DISINI" target="_blank" aria-label="Google Drive"><i class="fab fa-google-drive"></i></a>
+                    </div>
+                    <h4>My Portfolio Archive (Google Drive)</h4>
+                    <p>Complete repository of academic coursework, project documentation, design assets, and official certificates stored in Google Drive.</p>
+                    <div class="tech-row">
+                        <span>Documentation</span><span>Certificates</span><span>Full Archive</span>
+                    </div>
+                    <a href="URL_GOOGLE_DRIVE_KAMU_DISINI" target="_blank" class="work-link">
+                        Open Google Drive <i class="fas fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Credentials / Training -->
+        <section id="training" class="section reveal">
+            <div class="section-header">
+                <span class="eyebrow">04 / CERTIFICATIONS & TRAINING</span>
+                <h2>Continuous Learning</h2>
+            </div>
+
+            <div class="timeline-list">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-head">
+                            <h4>ASAH Dicoding Program — AI Full-Stack Developer Path</h4>
+                            <span class="year-tag">2026</span>
+                        </div>
+                        <p>Intensive career-readiness training covering artificial intelligence integration, modern full-stack web engineering, and scalable application architecture.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-head">
+                            <h4>Google Skill AI Labs</h4>
+                            <span class="year-tag">2026</span>
+                        </div>
+                        <p>Practical hands-on training in operating Google Cloud Skill Labs, experimenting with generative AI workflows, and managing cloud-based automation environments.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer>
-        <p>Designed & Crafted by Azmi Hani Nawra M</p>
-        <p class="footer-sub">Informatics Universitas Ahmad Dahlan • English Portfolio Assignment 2026</p>
+    <footer class="footer">
+        <div class="footer-inner">
+            <div>
+                <div class="logo">hani<span>.sec</span></div>
+                <p>Azmi Hani Nawra Ma'arif • Informatics Universitas Ahmad Dahlan</p>
+            </div>
+            <div class="footer-socials">
+                <a href="https://github.com/2300018277" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://drive.google.com/drive/folders/1-9Fv41W7j9FRp2T9lxF6PXTGIZgGn-QS?usp=drive_link" target="_blank"><i class="fab fa-google-drive"></i> Drive Portfolio</a>
+            </div>
+        </div>
     </footer>
 
     <script src="script.js"></script>
